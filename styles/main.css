@@ -229,7 +229,7 @@ p {
     margin: 4px 0px;
     position: relative;
     border-style: solid;
-    border-width: 0px 4px 0px 4px;
+    border-width: 0px 0px 0px 0px;
     border-color: #FC0233;
     user-select: none;
     -moz-user-select: none;
@@ -258,7 +258,7 @@ p {
     transition: 0.5s;
     position: absolute;
     bottom: 3px;
-    right: 0px;
+    right: 3px;
 }
 
 .bauhaus-button:focus {
@@ -266,12 +266,18 @@ p {
 }
 
 .bauhaus-button:hover::after, .bauhaus-button:focus::after {
-    width: 100%;
+    width: 96%;
+    width: calc(100% - 6px);
+    width: -webkit-calc(100% - 6px);
+    width: -moz-calc(100% - 6px);
+    width: -ms-calc(100% - 6px);
+    width: -o-calc(100% - 6px);
     transition: 0.25s;
 }
 
 .bauhaus-button:active {
     transform: scale(0.98);
+    box-shadow: inset 0px 0px 4px 0px rgba(5,5,5,0.8);
 }
 
 .bauhaus-button.fixed-width {
