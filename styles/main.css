@@ -1,5 +1,20 @@
 @import url("https://assembl.ch/import/css/fonts.css");
 
+/*
+COLORS
+
+VIBRANT BLUE: #004CFF;
+VIBRANT RED: #FC0233;
+VIBRANT GREEN: #01A043;
+VIBRANT YELLOW: #F2B409;
+
+BACKGROUND BLUE: #193864;
+BACKGROUND RED: #A00808;
+BACKGROUND GREEN: #1C6419;
+BACKGROUND YELLOW: #C99300;
+
+*/
+
 html {
     height: 100%;
     background-color: #EDF4F4;
@@ -12,8 +27,6 @@ html, body {
     display: block;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 body {
@@ -25,6 +38,8 @@ body {
     font-size: 17px;
     caret-color: #193864;
     min-width: 650px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 *:focus {
@@ -59,11 +74,25 @@ p {
     margin: 12px 0px;
 }
 
+#bauhaus-background {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 500%;
+    width: 100%;
+    background: url('../images/background.png');
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
 .card-outer {
     display: block;
     width: 100%;
     position: relative;
-    margin-top: -128px;
+    margin: 256px 0px;
 }
 
 .card-outer.first-of-all {
@@ -83,15 +112,12 @@ p {
     overflow: hidden;
     white-space: nowrap;
     vertical-align: bottom;
-    color: #EDF4F4;
+    color: #1A1A1A;
+    margin-bottom: 11px;
 }
 
 .card-title.extra-big {
     font-size: 73px;
-}
-
-.first .card-title, .first-of-all .card-title {
-    color: #1A1A1A;
 }
 
 .card-title > * {
@@ -112,8 +138,10 @@ p {
     color: #EDF4F4;
     width: 400%;
     margin-left: -148%;
-    border-top: solid 14px rgba(0,0,0,0.27);
-    padding: 12% 0px 24% 0px;
+    /* border-top: solid 14px rgba(0,0,0,0.27); */
+    border-top: solid 14px #000000;
+    border-bottom: solid 14px #000000;
+    padding: 12% 0px;
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -129,15 +157,15 @@ p {
 }
 
 .card-inner.red {
-    background: #FC0233;
+    background: #A00808;
 }
 
 .card-inner.green {
-    background: #01A043;
+    background: #1C6419;
 }
 
 .card-inner.yellow {
-    background: #F2B409;
+    background: #C99300;
 }
 
 /*
@@ -203,6 +231,10 @@ p {
     border-style: solid;
     border-width: 0px 4px 0px 4px;
     border-color: #FC0233;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .bauhaus-button::before {
@@ -229,6 +261,10 @@ p {
     right: 0px;
 }
 
+.bauhaus-button:focus {
+    outline: 0;
+}
+
 .bauhaus-button:hover::after, .bauhaus-button:focus::after {
     width: 100%;
     transition: 0.25s;
@@ -242,6 +278,10 @@ p {
     width: 164px;
 }
 
+::selection {
+    background: rgba(0,0,0,0.33);
+}
+
 @media screen and (max-width: 780px) {
     .card-title.extra-big {
         font-size: 53px;
@@ -249,10 +289,11 @@ p {
 
     .card-title {
         font-size: 33px;
+        margin-bottom: 15px;
     }
 
     .card-inner {
-        padding: 20% 0px 40% 0px;
+        padding: 20% 0px;
     }
 }
 
@@ -267,10 +308,11 @@ p {
 
     .card-title {
         font-size: 23px;
+        margin-bottom: 19px;
     }
 
     .card-inner {
-        padding: 24% 0px 48% 0px;
+        padding: 24% 0px;
     }
 }
 
@@ -285,10 +327,11 @@ p {
 
     .card-title {
         font-size: 17px;
+        margin-bottom: 23px;
     }
 
     .card-inner {
-        padding: 32% 0px 64% 0px;
+        padding: 32% 0px;
     }
 }
 
