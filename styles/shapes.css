@@ -1,0 +1,36 @@
+#bauhaus-background {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bauhaus-geoshape {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.bauhaus-geoshape.triangle-1 {
+    top: 100px;
+    right: 54px;
+    border-top: 400px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 200px solid #004CFF;
+    transform: skew(-30deg, 23deg);
+}
+
+.bauhaus-geoshape.circle-1 {
+    top: 45px;
+    left: 73px;
+    border: solid 83px #FC0233;
+    border-radius: 83px;
+}
