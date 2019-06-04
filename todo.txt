@@ -1,0 +1,5 @@
+- Assembl logo should be a bit higher up
+- Background should be different (less childish)
+- Buttons could be larger
+- Every "card" should have a horizontal bottom
+- Last card should touch the bottom of the page
