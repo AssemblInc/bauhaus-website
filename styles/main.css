@@ -21,14 +21,14 @@ html {
     background-attachment: fixed;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html, body {
     display: block;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 body {
@@ -39,7 +39,6 @@ body {
     font-weight: 300;
     font-size: 17px;
     caret-color: #193864;
-    min-width: 650px;
 }
 
 *:focus {
@@ -78,10 +77,10 @@ p {
     margin: 12px 0px;
 }
 
-#bauhaus-background {
+.bauhaus-background {
     display: block;
     position: fixed;
-    top: 0px;
+    top: -48px;
     left: 0px;
     right: 0px;
     height: 500%;
@@ -92,23 +91,50 @@ p {
     z-index: -1;
 }
 
+#bg1 {
+
+}
+
+#bg2 {
+    background-size: 70%;
+    background-position: 250% 100%;
+    opacity: 0.6;
+}
+
 .card-outer {
     display: block;
     width: 100%;
     position: relative;
-    margin: 256px 0px;
+    margin: 400px 0px;
+    padding: 1% 0px;
+    color: #EDF4F4;
 }
 
-.card-outer.first-of-all {
-    margin-top: 14%;
+.card-outer:first-of-type {
+    margin-top: 400px;
 }
 
-.card-outer.first {
-    margin-top: 30%;
+.blue-bg {
+    background-color: #193864;
+    color: #EDF4F4;
+}
+
+.red-bg {
+    background-color: #A00808;
+    color: #EDF4F4;
+}
+
+.green-bg {
+    background-color: #1C6419;
+    color: #EDF4F4;
+}
+
+.yellow-bg {
+    background-color: #C99300;
+    color: #EDF4F4;
 }
 
 .card-title {
-    transform: rotate(-14deg);
     text-align: center;
     font-size: 43px;
     font-weight: 500;
@@ -117,11 +143,29 @@ p {
     white-space: nowrap;
     vertical-align: bottom;
     color: #1A1A1A;
-    margin-bottom: 11px;
+    width: 400%;
+    position: absolute;
+    top: -70px;
+    left: -150%;
+    right: -150%;
+    z-index: 4;
+}
+
+.first .card-title {
+    transform: rotate(-14deg);
+}
+
+.second .card-title {
+    transform: rotate(-4deg);
+}
+
+.third .card-title {
+    transform: rotate(7deg);
 }
 
 .card-title.extra-big {
-    font-size: 73px;
+    font-size: 93px;
+    top: -140px;
 }
 
 .card-title > * {
@@ -131,92 +175,88 @@ p {
     vertical-align: bottom;
 }
 
-.other-rotation .card-title {
-    transform: rotate(14deg);
-}
-
-.card-inner {
+.card-inner-top {
     display: block;
-    transform: rotate(-14deg);
-    background-color: #1A1A1A;
-    color: #EDF4F4;
+    border-top: solid 14px #1A1A1A;
     width: 400%;
-    margin-left: -150%;
-    /* border-top: solid 14px rgba(0,0,0,0.27); */
-    border-top: solid 14px #000000;
-    border-bottom: solid 14px #000000;
-    padding: 12% 0px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
+    height: 70%;
+    z-index: 1;
+    position: absolute;
+    left: -150%;
+    right: -150%;
+    top: 0px;
 }
 
-.other-rotation .card-inner {
-    transform: rotate(14deg);
+.first .card-inner-top {
+    transform: rotate(-14deg);
 }
 
-.card-inner.blue {
-    background-color: #193864;
+.second .card-inner-top {
+    transform: rotate(-4deg);
 }
 
-.card-inner.red {
-    background-color: #A00808;
+.third .card-inner-top {
+    transform: rotate(7deg);
 }
 
-.card-inner.green {
-    background-color: #1C6419;
-}
-
-.card-inner.yellow {
-    background-color: #C99300;
+.card-inner-middle {
+    display: block;
+    margin-top: 10%;
+    z-index: 3;
+    margin: 8% auto;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
 }
 
 /*
-.card-inner::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 25%;
-    background: inherit;
-    position: absolute;
-    bottom: -25%;
-    z-index: -1;
+.first .card-inner-middle {
+    transform: rotate(-4deg);
+}
+
+.second .card-inner-middle {
+    transform: rotate(0deg);
+}
+
+.third .card-inner-middle {
+    transform: rotate(4deg);
 }
 */
 
-.card-inner-content {
-    position: relative;
-    transform: rotate(14deg);
-    width: 20%;
-    max-width: 800px;
-    margin: 0 auto;
+.card-inner-bottom {
     display: block;
+    border-bottom: solid 14px #1A1A1A;
+    width: 400%;
+    height: 70%;
+    z-index: 1;
+    position: absolute;
+    left: -150%;
+    right: -150%;
+    bottom: 0px;
 }
 
-.other-rotation .card-inner-content {
-    transform: rotate(-14deg);
+.first .card-inner-bottom {
+    transform: rotate(-7deg);
 }
 
-.card-inner-content-top {
+.second .card-inner-bottom {
+    transform: rotate(4deg);
+}
+
+.third .card-inner-bottom {
+    transform: rotate(14deg);
+}
+
+.card-inner-content-right {
     text-align: right;
-    transform: translateY(-60%);
-}
-
-.other-rotation .card-inner-content-top {
-    text-align: left;
 }
 
 .card-inner-content-middle {
     text-align: left;
 }
 
-.card-inner-content-bottom {
+.card-inner-content-left {
     text-align: left;
-    transform: translateY(60%);
-}
-
-.other-rotation .card-inner-content-bottom {
-    text-align: right;
 }
 
 .bauhaus-button {
@@ -299,6 +339,122 @@ p {
     background: rgba(0,0,0,0.33);
 }
 
+/*
+.card-outer {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 256px 0px;
+}
+
+.card-outer.first-of-all {
+    margin-top: 14%;
+}
+
+.card-outer.first {
+    margin-top: 30%;
+}
+
+.card-title {
+    transform: rotate(-14deg);
+    text-align: center;
+    font-size: 43px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    color: #1A1A1A;
+    margin-bottom: 11px;
+}
+
+.card-title.extra-big {
+    font-size: 73px;
+}
+
+.card-title > * {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.other-rotation .card-title {
+    transform: rotate(14deg);
+}
+
+.card-inner {
+    display: block;
+    transform: rotate(-14deg);
+    background-color: #1A1A1A;
+    color: #EDF4F4;
+    width: 400%;
+    margin-left: -150%;
+    border-top: solid 14px #1A1A1A;
+    border-bottom: solid 14px #1A1A1A;
+    padding: 12% 0px;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.other-rotation .card-inner {
+    transform: rotate(14deg);
+}
+
+.card-inner.blue {
+    background-color: #193864;
+}
+
+.card-inner.red {
+    background-color: #A00808;
+}
+
+.card-inner.green {
+    background-color: #1C6419;
+}
+
+.card-inner.yellow {
+    background-color: #C99300;
+}
+
+.card-inner-content {
+    position: relative;
+    transform: rotate(14deg);
+    width: 20%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+.other-rotation .card-inner-content {
+    transform: rotate(-14deg);
+}
+
+.card-inner-content-top {
+    text-align: right;
+    transform: translateY(-60%);
+}
+
+.other-rotation .card-inner-content-top {
+    text-align: left;
+}
+
+.card-inner-content-middle {
+    text-align: left;
+}
+
+.card-inner-content-bottom {
+    text-align: left;
+    transform: translateY(60%);
+}
+
+.other-rotation .card-inner-content-bottom {
+    text-align: right;
+}
+*/
+
+/*
 @media screen and (max-width: 780px) {
     .card-title.extra-big {
         font-size: 53px;
@@ -365,3 +521,4 @@ p {
         font-size: 17px;
     }
 }
+*/
