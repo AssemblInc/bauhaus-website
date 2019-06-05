@@ -262,12 +262,6 @@ p {
     right: 4px;
     bottom: 4px;
     opacity: 0.27;
-    transition: 0.25s;
-}
-
-.bauhaus-button:hover::before, .bauhaus-button:focus::before {
-    right: 0px;
-    transition: 0.12s;
 }
 
 .bauhaus-button::after {
