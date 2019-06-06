@@ -1,3 +1,4 @@
+/*
 var bg1 = null;
 var bg2 = null;
 function onScrollEvent() {
@@ -19,3 +20,4 @@ function initEffects() {
 }
 
 document.addEventListener("DOMContentLoaded", initEffects);
+*/

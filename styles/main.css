@@ -17,7 +17,7 @@ BACKGROUND YELLOW: #C99300;
 
 html {
     height: 100%;
-    background-color: #FAF0E6;
+    background-color: #FFDF71;
     background-attachment: fixed;
     margin: 0px;
     padding: 0px;
@@ -37,8 +37,9 @@ body {
     color: #1A1A1A;
     font-family: 'Renner', Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 21px;
     caret-color: #193864;
+    cursor: default;
 }
 
 *:focus {
@@ -50,16 +51,16 @@ b, th {
 }
 
 a, a:visited {
-	color: #97CED9;
-	text-decoration: none;
+	color: #193864;
+	text-decoration: underline;
 	cursor: pointer;
-	transition: color 0.25s;
+	transition: color 0.40s;
 }
 
 a:hover, a:focus, a:active {
-    color: #ABE2ED;
+    color: #D30706;
     text-decoration: underline;
-	transition: color 0.05s;
+	transition: color 0.10s;
 	outline: 0;
 }
 
@@ -77,223 +78,138 @@ p {
     margin: 12px 0px;
 }
 
-.bauhaus-background {
+hr {
+    margin: 77px 27px;
+    border: none;
+    height: 11px;
+    background: #1A1A1A;
+}
+
+.bauhaus-header {
     display: block;
-    position: fixed;
-    top: -48px;
-    left: 0px;
-    right: 0px;
-    height: 500%;
-    width: 100%;
-    background: url('../images/background.png');
-    background-position: center center;
-    background-repeat: repeat;
-    z-index: -1;
-}
-
-#bg1 {
-
-}
-
-#bg2 {
-    background-size: 70%;
-    background-position: 250% 100%;
-    opacity: 0.6;
-}
-
-.card-outer {
-    display: block;
-    width: 100%;
-    position: relative;
-    margin: 400px 0px;
-    padding: 1% 0px;
+    background: #193864;
     color: #EDF4F4;
-}
-
-.card-outer:first-of-type {
-    margin-top: 400px;
-}
-
-.blue-bg {
-    background-color: #193864;
-    color: #EDF4F4;
-}
-
-.red-bg {
-    background-color: #A00808;
-    color: #EDF4F4;
-}
-
-.green-bg {
-    background-color: #1C6419;
-    color: #EDF4F4;
-}
-
-.yellow-bg {
-    background-color: #C99300;
-    color: #EDF4F4;
-}
-
-.card-title {
+    width: 300%;
+    height: 100px;
+    padding: 152px 128px 43px 128px;
+    position: absolute;
+    top: -100px;
+    left: -100%;
+    transform-origin: bottom center;
+    transform: rotate(-14deg);
     text-align: center;
-    font-size: 43px;
-    font-weight: 500;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom;
-    color: #1A1A1A;
-    width: 400%;
-    position: absolute;
-    top: -70px;
-    left: -150%;
-    right: -150%;
-    z-index: 4;
+    border-bottom: solid 11px #FAF0E6;
 }
 
-.first .card-title {
-    transform: rotate(-14deg);
-}
-
-.second .card-title {
-    transform: rotate(-4deg);
-}
-
-.third .card-title {
-    transform: rotate(7deg);
-}
-
-.card-title.extra-big {
-    font-size: 93px;
-    top: -140px;
-}
-
-.card-title > * {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom;
-}
-
-.card-inner-top {
+.bauhaus-header::before {
+    content: '';
     display: block;
-    border-top: solid 14px #1A1A1A;
-    width: 400%;
-    height: 70%;
-    z-index: 1;
     position: absolute;
-    left: -150%;
-    right: -150%;
-    top: 0px;
+    bottom: 90%;
+    left: 0px;
+    width: 100%;
+    height: 1000%;
+    background: inherit;
 }
 
-.first .card-inner-top {
-    transform: rotate(-14deg);
-}
-
-.second .card-inner-top {
-    transform: rotate(-4deg);
-}
-
-.third .card-inner-top {
-    transform: rotate(7deg);
-}
-
-.card-inner-middle {
-    display: block;
-    margin-top: 10%;
-    z-index: 3;
-    margin: 8% auto;
-    width: 80%;
-    max-width: 800px;
+header {
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+    display: inline-block;
     position: relative;
+    z-index: 2;
 }
 
-/*
-.first .card-inner-middle {
-    transform: rotate(-4deg);
+header h1 {
+    font-size: 117px;
+    text-transform: lowercase;
 }
 
-.second .card-inner-middle {
-    transform: rotate(0deg);
-}
-
-.third .card-inner-middle {
-    transform: rotate(4deg);
-}
-*/
-
-.card-inner-bottom {
+main {
     display: block;
-    border-bottom: solid 14px #1A1A1A;
-    width: 400%;
-    height: 70%;
-    z-index: 1;
-    position: absolute;
-    left: -150%;
-    right: -150%;
-    bottom: 0px;
+    margin: 400px auto 64px auto;
+    width: 90%;
+    max-width: 800px;
+    line-height: 1.3;
 }
 
-.first .card-inner-bottom {
-    transform: rotate(-7deg);
+nav {
+    margin-bottom: 72px;
 }
 
-.second .card-inner-bottom {
-    transform: rotate(4deg);
-}
-
-.third .card-inner-bottom {
-    transform: rotate(14deg);
-}
-
-.card-inner-content-right {
+footer {
+    display: block;
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 32px 16px;
     text-align: right;
+    font-weight: 400;
 }
 
-.card-inner-content-middle {
-    text-align: left;
-}
-
-.card-inner-content-left {
-    text-align: left;
+footer a {
+    display: inline-block;
+    margin: 0px 8px;
+    text-transform: lowercase;
 }
 
 .bauhaus-button {
     display: inline-block;
-    background: #FC0233;
+    background: #193864;
     color: #EDF4F4;
-    padding: 12px 68px 12px 42px;
+    padding: 12px 62px 12px 42px;
     border: 0;
     cursor: pointer;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 25px;
+    line-height: 31px;
     font-family: 'Renner', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     margin: 4px 0px;
     position: relative;
     border-style: solid;
     border-width: 0px 0px 0px 0px;
-    border-color: #FC0233;
+    border-color: #193864;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bauhaus-button.fixed-width {
-    width: 214px;
-    padding: 12px 48px 12px 18px;
-    text-align: left;
+    width: 414px;
+    padding: 12px 62px 12px 18px;
+}
+
+.bauhaus-button.full-width {
+    width: 100%;
+    padding: 14px 62px 14px 18px;
+}
+
+.bauhaus-button .bauhaus-button-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 2;
+}
+
+.bauhaus-button .bauhaus-button-subtitle {
+    text-transform: lowercase;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
 }
 
 .bauhaus-button::before {
     display: block;
-    width: 36px;
+    width: 54px;
     background: url('../images/arrow_forward.png');
-    background-size: 26px;
+    background-size: 44px;
     background-position: center center;
     background-repeat: no-repeat;
     content: '';
@@ -301,28 +217,25 @@ p {
     top: 4px;
     right: 4px;
     bottom: 4px;
-    opacity: 0.27;
+    opacity: 0.37;
+    z-index: 3;
 }
 
 .bauhaus-button::after {
     display: block;
     content: '';
     width: 0%;
-    height: 4px;
-    background: rgba(0,0,0,0.27);
+    height: 100%;
+    background: #D30706;
     position: absolute;
-    bottom: 3px;
-    right: 3px;
-    transition: 0.5s;
+    bottom: 0px;
+    right: 0px;
+    transition: 0.40s;
+    z-index: 1;
 }
 
 .bauhaus-button:hover::after, .bauhaus-button:focus::after {
-    width: 96%;
-    width: calc(100% - 6px);
-    width: -webkit-calc(100% - 6px);
-    width: -moz-calc(100% - 6px);
-    width: -ms-calc(100% - 6px);
-    width: -o-calc(100% - 6px);
+    width: 100%;
     transition: 0.25s;
 }
 
@@ -331,194 +244,119 @@ p {
 }
 
 .bauhaus-button:active {
-    transform: scale(0.98);
-    box-shadow: inset 0px 0px 4px 0px rgba(5,5,5,0.8);
+    transform: scale(0.99);
+}
+
+.bauhaus-button:active::after {
+    transition: 0s;
+    background: #AB0002;
 }
 
 ::selection {
-    background: rgba(0,0,0,0.33);
-}
-
-/*
-.card-outer {
-    display: block;
-    width: 100%;
-    position: relative;
-    margin: 256px 0px;
-}
-
-.card-outer.first-of-all {
-    margin-top: 14%;
-}
-
-.card-outer.first {
-    margin-top: 30%;
-}
-
-.card-title {
-    transform: rotate(-14deg);
-    text-align: center;
-    font-size: 43px;
-    font-weight: 500;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom;
-    color: #1A1A1A;
-    margin-bottom: 11px;
-}
-
-.card-title.extra-big {
-    font-size: 73px;
-}
-
-.card-title > * {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom;
-}
-
-.other-rotation .card-title {
-    transform: rotate(14deg);
-}
-
-.card-inner {
-    display: block;
-    transform: rotate(-14deg);
-    background-color: #1A1A1A;
+    background: #FC0233;
     color: #EDF4F4;
-    width: 400%;
-    margin-left: -150%;
-    border-top: solid 14px #1A1A1A;
-    border-bottom: solid 14px #1A1A1A;
-    padding: 12% 0px;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
-.other-rotation .card-inner {
-    transform: rotate(14deg);
-}
-
-.card-inner.blue {
-    background-color: #193864;
-}
-
-.card-inner.red {
-    background-color: #A00808;
-}
-
-.card-inner.green {
-    background-color: #1C6419;
-}
-
-.card-inner.yellow {
-    background-color: #C99300;
-}
-
-.card-inner-content {
-    position: relative;
-    transform: rotate(14deg);
-    width: 20%;
-    max-width: 800px;
-    margin: 0 auto;
+#bauhaus-anim-1 {
+    position: absolute;
+    left: -900px;
+    top: -900px;
     display: block;
+    width: 1000px;
+    height: 1000px;
 }
 
-.other-rotation .card-inner-content {
-    transform: rotate(-14deg);
+#bauhaus-anim-1 .bauhaus-anim-elem {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    opacity: 0;
 }
 
-.card-inner-content-top {
-    text-align: right;
-    transform: translateY(-60%);
+#bauhaus-anim-1 .bauhaus-anim-elem:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    border: solid transparent 32px;
+    border-right: solid #FAF0E6 32px;
+    animation: rotate 13s linear 0s infinite;
 }
 
-.other-rotation .card-inner-content-top {
-    text-align: left;
+#bauhaus-anim-1 .bauhaus-anim-elem:nth-child(2) {
+    width: 92%;
+    height: 92%;
+    top: 4%;
+    left: 4%;
+    border: solid transparent 27px;
+    border-top: solid #FAF0E6 27px;
+    border-bottom: solid #FAF0E6 27px;
+    animation: rotate 12.1s linear 0s infinite;
 }
 
-.card-inner-content-middle {
-    text-align: left;
+#bauhaus-anim-1 .bauhaus-anim-elem:nth-child(3) {
+    width: 82%;
+    height: 82%;
+    top: 9%;
+    left: 9%;
+    border: solid transparent 15px;
+    border-top: solid #FAF0E6 15px;
+    animation: rotate 14s linear 0s infinite;
 }
 
-.card-inner-content-bottom {
-    text-align: left;
-    transform: translateY(60%);
+#bauhaus-anim-1 .bauhaus-anim-elem:nth-child(4) {
+    width: 74%;
+    height: 74%;
+    top: 13%;
+    left: 13%;
+    border: solid transparent 7px;
+    border-top: solid #FAF0E6 7px;
+    animation: rotate 12s linear 0s infinite;
 }
 
-.other-rotation .card-inner-content-bottom {
-    text-align: right;
-}
-*/
-
-/*
-@media screen and (max-width: 780px) {
-    .card-title.extra-big {
-        font-size: 53px;
-    }
-
-    .card-title {
-        font-size: 33px;
-        margin-bottom: 15px;
-    }
-
-    .card-inner {
-        padding: 20% 0px;
-    }
+#bauhaus-anim-1 .bauhaus-anim-elem:nth-child(5) {
+    width: 64%;
+    height: 64%;
+    top: 17%;
+    left: 17%;
+    border: solid transparent 23px;
+    border-left: solid #FAF0E6 23px;
+    border-top: solid #FAF0E6 23px;
+    animation: rotate 11s linear 0s infinite;
 }
 
-@media screen and (max-width: 650px) {
-    body {
-        min-width: 450px;
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
     }
-
-    .card-title.extra-big {
-        font-size: 43px;
-    }
-
-    .card-title {
-        font-size: 23px;
-        margin-bottom: 19px;
-    }
-
-    .card-inner {
-        padding: 24% 0px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    body {
-        min-width: 320px;
-    }
-
-    .card-title.extra-big {
-        font-size: 33px;
-    }
-
-    .card-title {
-        font-size: 17px;
-        margin-bottom: 23px;
-    }
-
-    .card-inner {
-        padding: 32% 0px;
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 359px) {
-    body {
-        min-width: 320px;
+@-moz-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
     }
-
-    .card-title.extra-big {
-        font-size: 27px;
-    }
-
-    .card-title {
-        font-size: 17px;
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
     }
 }
-*/
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
