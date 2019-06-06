@@ -58,7 +58,7 @@ a, a:visited {
 }
 
 a:hover, a:focus, a:active {
-    color: #D30706;
+    color: #FC0233;
     text-decoration: underline;
 	transition: color 0.10s;
 	outline: 0;
@@ -178,6 +178,7 @@ footer a {
     -ms-user-select: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: 0.25s;
 }
 
 .bauhaus-button.fixed-width {
@@ -244,6 +245,7 @@ footer a {
 }
 
 .bauhaus-button:active {
+    transition: 0s;
     transform: scale(0.99);
 }
 
