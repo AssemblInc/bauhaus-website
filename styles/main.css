@@ -13,11 +13,13 @@ BACKGROUND RED: #A00808;
 BACKGROUND GREEN: #1C6419;
 BACKGROUND YELLOW: #C99300;
 
+BACKGROUND BLUE (PROPOSED
+
 */
 
 html {
     height: 100%;
-    background-color: #FFDF71;
+    background-color: #1983AC;
     background-attachment: fixed;
     margin: 0px;
     padding: 0px;
@@ -37,7 +39,7 @@ body {
     color: #1A1A1A;
     font-family: 'Renner', Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 21px;
+    font-size: 27px;
     caret-color: #193864;
     cursor: default;
 }
